@@ -1,4 +1,6 @@
 Use pyenv to install and use Python3.11.2 or greater. Then:
+pyenv install 3.11.2
+pyenv local 3.11.2
 
 python3 -m pip install --user pipx
 If you get warnings about your the path to your Python bin dir, fix them.
