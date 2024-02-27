@@ -1,28 +1,54 @@
-Jupyter Notebook to set up Flask BbRest and demo 2loOr3lo
+### Project Title: Learn-2LO_Or_3LO
+### Description:
+We have had many questions from developers about when to use 2-legged OAuth or 3-legged OAuth when developing applications using Learn REST APIs. This project provides samples of both 2LO and 3LO using a Juypter Lab, a web-based interactive development environment (IDE) that is flexible and extensible user interface that allows users to work with notebooks. It greatly simplifies sharing Python code amongst developers. We use the Flask framework for the web server, and the bbrest library for REST API calls.
 
-Use pyenv to install and use Python3.11.2 or greater. Then:
-pyenv install 3.11.2
-pyenv local 3.11.2
+As you will see, this project is simple enough that the structure has all of the files at the top-level. We provide a couple of notebooks that we use to demonstrate the concepts of 2-legged OAuth and 3-legged OAuth with Blackboard Learn. There is no need for sub-folders.
 
-python3 -m pip install --user pipx
-If you get warnings about your the path to your Python bin dir, fix them.
+### Prerequisites:
+* OS: MacOSX 14^ (Windows will require the Windows port of pyenv for Windows.) We explain how to install the following prerequisites in the Installation section below.
+* Python version management: pyenv
+* Python environment managment: pipx
+* Python package management: Poetry
+* Python Learn REST API Library: bbrest
+* PythonWeb server framework: Flask
+* A means to proxy the local webserver to the public internet: ngrok
+    * We use ngrok, you may find your own mechanism to proxy server running on a local port to the public internet.
 
-python3 -m pipx ensurepath
+### Installation:
+* Use Git to clone this project to your local machine.
+* cd Learn-2lO_Or_3LO
+* Install pyenv
+    * See https://github.com/pyenv/pyenv?tab=readme-ov-file#installation  
+* Use pyenv to install and use Python3.11.2 or greater.
+    * pyenv install 3.11.2
+* Set Python 3.11.2 to be used for this project.
+    * pyenv local 3.11.2
+* Install pipx
+    * python3 -m pip install --user pipx
+    * If you get warnings about your the path to your Python bin dir, follow the instructons on how to fix them.
+* Ensure pipx is on your path variable
+    * python3 -m pipx ensurepath
+* Install Poetry
+    * pipx install poetry
+* Initialize Poetry in the current directory.
+    * poetry init
+* Add the bbreast library for Python.
+    * poetry add bbrest
+* Add the Flask web server framework.
+    * poetry add flask
+* Install Jupyter Lab
+    * poetry add --dev jupyterlab
+* Install ngrok or some other proxy to make the Flask server available on the public internet.
+    * For ngrok see: https://ngrok.com/docs/getting-started/
+        * (We purchased our own domain for this demo... And we need to run on a system that isn't blocked by any firewall rules...)
 
-pipx install poetry
+### Usage (Launching the project):
+* poetry run jupyter lab
 
-poetry init
-
-poetry add bbrest
-
-poetry add flask
-
-poetry add --dev jupyterlab
-
-poetry run jupyter lab
-
-BbRESTentitlements.js - create a bookmark with this script in your browser.
-
-ngrok http --region=us --domain=apotelesm.ngrok.io 5000
+### Other Useful Things
+* BbRESTentitlements.js - create a bookmark with this script in your browser.
+* Expose the Flask web server.
+    * ngrok http --region=us --domain=\<Your FQDN\> 5000
+    * Example: ngrok http --region=us --domain=apotelesm.ngrok.io 5000
 
 
