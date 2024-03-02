@@ -48,7 +48,9 @@ As you will see, this project is simple enough that the structure has all of the
 ### Other Useful Things
 * BbRESTentitlements.js - create a bookmark with this script in your browser.
 * Expose the Flask web server.
-    * ngrok http --region=us --domain=\<Your FQDN\> 5000
-    * Example: ngrok http --region=us --domain=apotelesm.ngrok.io 5000
+    * Using port 5210 for 2LO and 5310 for 3LO.
+        * Flask 5000 will not work with ngrokd on Mac OSX.
+    * ngrok http --region=us --domain=\<Your FQDN\> 5210
+    * Example: ngrok http --region=us --domain=restapp.ngrok.io 5210
 
 
