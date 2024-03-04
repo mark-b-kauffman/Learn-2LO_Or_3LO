@@ -9,7 +9,6 @@ As you will see, this project is simple enough that the structure has all of the
 * Python version management: pyenv
 * Python environment managment: pipx
 * Python package management: Poetry
-* Python Learn REST API Library: bbrest
 * PythonWeb server framework: Flask
 * A means to proxy the local webserver to the public internet: ngrok
     * We use ngrok, you may find your own mechanism to proxy server running on a local port to the public internet.
@@ -32,8 +31,6 @@ As you will see, this project is simple enough that the structure has all of the
     * pipx install poetry
 * Initialize Poetry in the current directory.
     * poetry init
-* Add the bbreast library for Python.
-    * poetry add bbrest
 * Add the Flask web server framework.
     * poetry add flask
 * Install Jupyter Lab
