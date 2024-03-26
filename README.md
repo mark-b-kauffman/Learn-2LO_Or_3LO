@@ -41,6 +41,7 @@ As you will see, this project is simple enough that the structure has all of the
 
 ### Usage (Launching the project):
 * poetry run jupyter lab
+* Access and run the Python code notebooks in the src/ folder.
 
 ### Other Useful Things
 * BbRESTentitlements.js - create a bookmark with this script in your browser.
