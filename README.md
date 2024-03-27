@@ -12,6 +12,8 @@ As you will see, this project is simple enough that the structure has all of the
 * PythonWeb server framework: Flask
 * A means to proxy the local webserver to the public internet: ngrok
     * We use ngrok, you may find your own mechanism to proxy server running on a local port to the public internet.
+* A registered REST application on developer.anthology.com, for which you have the application ID, Key, and Secret.
+* A Learn server with a user with the userName of auser and some other users.
 
 ### Installation:
 * Use Git to clone this project to your local machine.
@@ -41,14 +43,16 @@ As you will see, this project is simple enough that the structure has all of the
 
 ### Usage (Launching the project):
 * poetry run jupyter lab
+* Open the src folder.
+* Copy Config_template.py to Config.py and then set the values specific to your REST application and Learn server.
 * Access and run the Python code notebooks in the src/ folder.
 
 ### Other Useful Things
 * BbRESTentitlements.js - create a bookmark with this script in your browser.
 * Expose the Flask web server.
-    * Using port 5210 for 2LO and 5310 for 3LO.
+    * Use port 5210 for 2LO and 5310 for 3LO.
         * Flask 5000 will not work with ngrokd on Mac OSX.
-    * ngrok http --region=us --domain=\<Your FQDN\> 5210
-    * Example: ngrok http --region=us --domain=restapp.ngrok.io 5210
+    * ngrok http --region=us --domain=\<Your FQDN\> 5210|5310
+    * Example: ngrok http --region=us --domain=restapp.ngrok.io 5310
 
 
