@@ -13,7 +13,7 @@ As you will see, this project is simple enough that the structure has all of the
 * A means to proxy the local webserver to the public internet: ngrok
     * We use ngrok, you may find your own mechanism to proxy server running on a local port to the public internet.
 * A registered REST application on developer.anthology.com, for which you have the application ID, Key, and Secret.
-* A Learn server with a user with the userName of auser and some other users.
+* A Learn server with a user with the userName of auser and some other users, and the REST application deployed there.
 
 ### Installation:
 * Use Git to clone this project to your local machine.
